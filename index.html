@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Electrochemistry Simulation</title>
+<style>
+body {font-family: Arial; text-align:center; background:#0f172a; color:white;}
+.metal {width:100px;height:150px;background:silver;display:inline-flex;align-items:center;justify-content:center;margin:20px;}
+.wire {width:200px;height:5px;background:yellow;margin:auto;position:relative;}
+.electron {width:15px;height:15px;background:cyan;border-radius:50%;position:absolute;animation:move 2s linear infinite;}
+@keyframes move {from{left:0;} to{left:180px;}}
+button {padding:10px;font-size:16px;}
+</style>
+</head>
+
+<body>
+
+<h1>🔋 Simulation ไฟฟ้าเคมี</h1>
+
+<button onclick="start()">เริ่ม</button>
+
+<div>
+  <div class="metal">Zn</div>
+  <div class="wire"><div id="e" class="electron" style="display:none;"></div></div>
+  <div class="metal">Cu</div>
+</div>
+
+<p id="result"></p>
+
+<script>
+function start(){
+ document.getElementById("e").style.display="block";
+ document.getElementById("result").innerHTML="e⁻ ไหลจาก Zn → Cu ⚡";
+}
+</script>
+
+</body>
+</html>
